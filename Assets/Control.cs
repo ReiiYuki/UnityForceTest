@@ -5,7 +5,6 @@ using UnityEngine;
 public class Control : MonoBehaviour {
 
     private Rigidbody2D physic2D;
-    private bool isPress;
 
     void Awake()
     {
@@ -14,8 +13,12 @@ public class Control : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (!isPress&&Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
             physic2D.AddForce(new Vector2(0f, 30f));
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            physic2D.AddForce(new Vector2(5f, 0f));
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+            physic2D.AddForce(new Vector2(-5f, 0f));
     }
 
 
