@@ -14,7 +14,7 @@ public class Control : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.DownArrow))
-            physic2D.AddForce(new Vector2(0f, 30f));
+            physic2D.AddForce(new Vector2(0f, 15f));
         if (Input.GetKeyDown(KeyCode.RightArrow))
             physic2D.AddForce(new Vector2(5f, 0f));
         if (Input.GetKeyDown(KeyCode.LeftArrow))
